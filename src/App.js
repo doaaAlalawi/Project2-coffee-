@@ -1,26 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import axios from "axios";
+import "./App.css";
+import "./style.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import CoffeeType from "./component/CoffeeType";
+import Home from "./component/Home";
+import Menu from "./component/Menu";
+import Contact from "./component/Contact";
+import About from "./component/About";
+import logo from "./img/logo2.png";
+
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Navbar, Nav, Image } from "react-bootstrap";
+
+export default class App extends Component {
+  state = {
+    data: null
+  };
+  componentDidMount() {
+    axios
+      .get("https://cors-anywhere.herokuapp.com/https://intense-spire-23856.herokuapp.com/coffeebens.json")
+      .then(res => {
+        let doaa = res;
+        let data = { ...this.state };
+        data.data = doaa;
+        this.setState({ data: res.data });
+      }); }
+  render() {
+    return (
+      <div>
+        <BrowserRouter>
+          <div>
+            <Navbar className="justify-content-center center" bg="navbar-expand-sm fixed-top navbar-light" variant="" >
+              <Nav className="mr-auto">
+                <Image src={logo} style={{ width: "10rem" }} alt=""/>
+              </Nav>
+                <Nav className="justify-content-center mr-auto">
+                <Navbar.Brand herf="/Home"> Home </Navbar.Brand>
+                <Navbar.Brand href="/CoffeeType"> Beanse we have </Navbar.Brand>
+                <Navbar.Brand href="/About"> About Us</Navbar.Brand>
+                <Navbar.Brand href="/Menu"> 𝑀𝑒𝓃𝓊 </Navbar.Brand>
+                <Navbar.Brand className="ml-auto" href="/Contact"> Contact Us </Navbar.Brand>
+              </Nav>
+            </Navbar>
+          </div>
+          <Switch>
+            <Route path="/Home" component = {Home} />
+            <Route exact path="/CoffeeType" render={() => this.state.data ? <CoffeeType data={this.state.data} /> : null } />
+            <Route path="/Menu" component = {Menu} />
+            <Route path="/Contact" component = {Contact} />
+            <Route path="/About" component = {About} />
+            <Route path="/" component = {Home} />
+            <Route path="*" />
+          </Switch>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
-
-export default App;
