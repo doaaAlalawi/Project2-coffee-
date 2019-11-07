@@ -31,22 +31,22 @@ export default class App extends Component {
       <div>
         <BrowserRouter>
           <div>
-            <Navbar className="justify-content-center center" bg="navbar-expand-sm fixed-top navbar-light" variant="" >
+            <Navbar className="justify-content-center center" bg="navbar-expand-sm fixed-top navbar-light light" expand="lg" >
               <Nav className="mr-auto">
                 <Image src={logo} style={{ width: "10rem" }} alt=""/>
               </Nav>
                 <Nav className="justify-content-center mr-auto">
-                <Navbar.Brand herf="/Home"> Home </Navbar.Brand>
+                <Navbar.Brand href="/Home"> Home </Navbar.Brand>
                 <Navbar.Brand href="/CoffeeType"> Beanse we have </Navbar.Brand>
                 <Navbar.Brand href="/About"> About Us</Navbar.Brand>
-                <Navbar.Brand href="/Menu"> 𝑀𝑒𝓃𝓊 </Navbar.Brand>
+                <Navbar.Brand href="/Menu"> Menu </Navbar.Brand>
                 <Navbar.Brand className="ml-auto" href="/Contact"> Contact Us </Navbar.Brand>
               </Nav>
             </Navbar>
           </div>
           <Switch>
             <Route path="/Home" component = {Home} />
-            <Route exact path="/CoffeeType" render={() => this.state.data ? <CoffeeType data={this.state.data} /> : null } />
+            <Route exact path="/CoffeeType" render={() => this.state.data ? <CoffeeType data = {this.state.data} /> : null } />
             <Route path="/Menu" component = {Menu} />
             <Route path="/Contact" component = {Contact} />
             <Route path="/About" component = {About} />

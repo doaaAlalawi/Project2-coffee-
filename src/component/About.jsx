@@ -2,8 +2,17 @@ import React, { Component } from "react";
 import "../style.css";
 
 import back from "../img/back.png";
-import qute from "../img/qute.png";
-import hello from "../img/hello.png";
+import pic from "../img/pic.png";
+import pic2 from "../img/pic2.png";
+import pic3 from "../img/pic3.png";
+import pic4 from "../img/pic4.png";
+import pic5 from "../img/pic5.png";
+import pic6 from "../img/pic6.png";
+import pic7 from "../img/pic7.png";
+import pic8 from "../img/pic8.png";
+import pic9 from "../img/pic9.png";
+
+
 
 import { Carousel, Card } from "react-bootstrap";
 
@@ -16,14 +25,31 @@ export default class About extends Component {
             <img className="d-block w-100 aboutt" src={back} alt="First slide" />
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100 aboutt" src={qute} alt="Third slide" />
+            <img className="d-block w-100 aboutt" src={pic} alt="Third slide" />
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              className="d-block w-100 aboutt"
-              src={hello}
-              alt="Third slide"
-            />
+            <img className="d-block w-100 aboutt" src={pic2} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100 aboutt" src={pic3} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100 aboutt" src={pic4} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100 aboutt" src={pic5} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100 aboutt" src={pic6} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100 aboutt" src={pic7} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100 aboutt" src={pic8} alt="Third slide" />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100 aboutt" src={pic9} alt="Third slide" />
           </Carousel.Item>
         </Carousel>
         <Card>

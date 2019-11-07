@@ -1,19 +1,14 @@
 import React, { Component } from "react";
 import { Card ,Image } from "react-bootstrap";
 import "../style.css"
-// import sadeem from '../img/sadeem.png'
-import sadeem from "../img/sadeem.png";
+import pic from "../img/pic.png";
 
 export default class Home extends Component {
   render() {
     return (
        <div>
-
-         {/* <h1>welcome </h1>
-         <img src={sadeem} alt="" className ="sadeem"/> */}
-         
         <Card>
-        <Image  src = {sadeem}  alt = "" fluid style = {{ opacity:0.6 }}/>
+        <Image  src = {pic}  alt = "" fluid style = {{ opacity:0.6 }}/>
           <Card.ImgOverlay>
           <Card.Text className="centertext2">
           Welcome!
