@@ -46,54 +46,75 @@
     margin-right: 12px;
     background-color: #f0f0f0;
 }
-
-.list {
-    /* position: relative;
-    flex: 1 0 33.333333%;
-    height: 100%;
-    padding: 3.6em 0 0;
-    overflow-y: scroll;
-    background-color: #f0f0f0;
-    margin-right: 40px;
-    margin-left: 40px; */
-    
-        display: grid;
-        margin-top: 100px;
-        /* vertical-align: middle;
-        flex-direction: row;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-        flex: 25%;
-        width: calc(100% / 3);
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, 5vw);
-        grid-gap: 15px; */
-        float: left;
-        /* grid-template-columns: 1fr 1fr; */
-      
-        margin-left: 25px;
-        /* margin-right: auto; */
-        grid-template-columns: 100px 50px 100px;
-        /* grid-template-rows: 80px auto 80px;  */
-        grid-gap: 15px 10px;
-  }
-
-  .ff{
+  .font{
+    font-family:'McLaren', cursive;
+    font-size: 30px;
     color: #606060;
-    font-family: 'Source Sans Pro', sans-serif;
   }
-
-  .menu{
-      margin-top: 180px;
-      margin-left: 70px;
-      margin-right: 70px;
+  .menue{
+    float: left;
+    margin-top: 100px;
+    margin-right: 70px; 
   }
-
-  .menulist{
-      margin-left: 130px;
-      margin-top: 190px;
+  .beens{
+    float: left;
+    margin-top: 100px;
+    margin-right: 70px; 
+    margin-left: 3%;
   }
-  .background{
-      background-color: red;
+  @media (max-width: 320px){
+    .centertext2{
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 20px;  
+    }
+    .centertext{
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 10px;
+    }
+    .font{
+        font-family:'McLaren', cursive;
+        font-size: 10px;
+        color: #606060;
+    }
+    .story{
+        font-size: 15px;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .aboutt{
+        width:30px;
+        height:300px; 
+        margin-top: 70px;
+    }
+  }
+  @media (max-width: 425px){
+    .centertext2{
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 20px;  
+    }
+    .centertext{
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 10px;
+    }
+    .font{
+        font-family:'McLaren', cursive;
+        font-size: 10px;
+        color: #606060;
+    }
+    .story{
+        font-size: 15px;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .aboutt{
+        width:30px;
+        height:300px; 
+        margin-top: 70px;
+    }
   }

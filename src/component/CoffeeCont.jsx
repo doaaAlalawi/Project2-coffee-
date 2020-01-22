@@ -6,10 +6,10 @@ import { Card, Row, Col } from "react-bootstrap";
 export default class CoffeeCont extends Component {
   render() {
     return (
-      <div className="list menulist">
+      <div className="beens">
         <Row>
           <Col xs={4} md={4}>
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "15rem" }}>
               <Card.Img variant="top" src={this.props.beans.img}/>
               <Card.Body>
                 <Card.Title>{this.props.beans.name} </Card.Title>
@@ -18,6 +18,7 @@ export default class CoffeeCont extends Component {
             </Card>
           </Col>
         </Row>
+        {/* list menulist */}
       </div>        
     );
   }

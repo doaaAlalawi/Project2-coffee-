@@ -8,7 +8,7 @@ export default class Home extends Component {
     return (
        <div>
         <Card>
-        <Image  src = {pic}  alt = "" fluid style = {{ opacity:0.6 }}/>
+        <Image  src = {pic}  alt = "" fluid style = {{ opacity:0.6 }} id = "home"/>
           <Card.ImgOverlay>
           <Card.Text className="centertext2">
           Welcome!
